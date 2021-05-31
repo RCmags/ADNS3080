@@ -12,7 +12,7 @@ https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ncr6_wjw
 
 The sensor is generally sold as a module with a lens attached. This code was written around such a module. The following schematic shows how to connect the module to an arduino uno. It's the same for other boards except the SPI spins change. 
 
-<img src = "ADNS3080_arduino_wiring.jpg" width = "35%" height = "35%"> 
+<img src = "ADNS3080_arduino_wiring.jpg" width = "45%" height = "45%"> 
 
 The schematic was found here:  
 http://forum.arduino.ir/8/21/391.html
