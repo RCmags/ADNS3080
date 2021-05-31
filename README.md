@@ -12,4 +12,5 @@ https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ncr6_wjw
 
 The sensor is generally sold as a module with a lens attached. This code was written around such a module. The following schematic shows how to connect the module to an arduino uno. It's the same for other boards except the SPI spins change. 
 
+![Alt text](http://forum.arduino.ir/attachments/849d1395044211-module-snsor-jryaan-nori-optical-adns3080_fritzing_bb.jpg)
 
