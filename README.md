@@ -10,6 +10,6 @@ https://github.com/Neumi/OpticalFlowA3080ArduinoProcessing
 For more information on this sensor see the datasheet:  
 https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2009/ncr6_wjw27/ncr6_wjw27/docs/adns_3080.pdf
 
-The sensor is generally sold as a module with a lens attached. This code was written around such a module. The following schematic shows how to connect said module to an arduino uno. It's the same for other boards except the SPI spins change. 
+The sensor is generally sold as a module with a lens attached. This code was written around such a module. The following schematic shows how to connect the module to an arduino uno. It's the same for other boards except the SPI spins change. 
 
 
