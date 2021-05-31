@@ -4,10 +4,10 @@ This is an Arduino library for ADNS3080 mouse sensor. It provides a simple inter
 <img src = "ADNS3080_arduino_wiring.jpg" width = "40%" height = "40%"> 
 
 To focus the camera see the following link. It contains an arduino sketch and a python script that work in conjunction with this library.  
-
+https://github.com/RCmags/ADNS3080_frame_capture
 
 ### References:
-Credit goes to Lauszus and Neumi for on their code to get the sensor to work with arduino. This library is essentially a repackaging of their code into a neater form.
+Credit goes to Lauszus and Neumi for on their code to get the sensor to work with arduino. This library is essentially a repackaging of their code into a neater form.  
 https://github.com/Lauszus/ADNS3080  
 https://github.com/Neumi/OpticalFlowA3080ArduinoProcessing
 
