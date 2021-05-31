@@ -69,9 +69,9 @@ bool ADNS3080<TEMPLATE_INPUTS>
 
   // Check Connection
   if( readRegister(ADNS3080_PRODUCT_ID) == ADNS3080_PRODUCT_ID_VALUE ) {
-	return true;
+    return true;
   } else {
-	return false;
+    return false;
   } 
 }
 
@@ -110,8 +110,8 @@ void ADNS3080<TEMPLATE_INPUTS>
 
   // Zero displacement if motion did not occur
   if( *motion == false ) {
-	*dx = 0;
-	*dy = 0;
+    *dx = 0;
+    *dy = 0;
   }
 }
 
@@ -129,11 +129,11 @@ void ADNS3080<TEMPLATE_INPUTS>
   uint8_t motion  = (SPI.transfer(0x00) & B10000000) >> 7;
  
   if( motion == true ) {
-	*dx = SPI.transfer(0x00);
-	*dy = SPI.transfer(0x00);
+    *dx = SPI.transfer(0x00);
+    *dy = SPI.transfer(0x00);
   } else {
-	*dx = 0;
-	*dy = 0;
+    *dx = 0;
+    *dy = 0;
   }
 
   // Disable communication
@@ -149,7 +149,7 @@ void ADNS3080<TEMPLATE_INPUTS>
   writeRegister( ADNS3080_FRAME_CAPTURE, 0x83 );
   
   // Enable communication
-	digitalWrite( PIN_NCS, LOW );
+    digitalWrite( PIN_NCS, LOW );
   SPI.transfer( ADNS3080_PIXEL_BURST );
   delayMicroseconds( ADNS3080_T_SRAD );
 
@@ -158,21 +158,21 @@ void ADNS3080<TEMPLATE_INPUTS>
 
   // Recieve pixels until first is found 
   while( (pixel & B01000000) == 0 ) {
-	  pixel = SPI.transfer(0x00);
-	  delayMicroseconds( ADNS3080_T_LOAD );  
+      pixel = SPI.transfer(0x00);
+      delayMicroseconds( ADNS3080_T_LOAD );  
   }
   
   //-- Scan first frame:
   for( int y = 0; y < ADNS3080_PIXELS_Y; y += 1 ) {
-	for( int x = 0; x < ADNS3080_PIXELS_X; x += 1 ) {  
-	  
-	  // Store and scale past pixel
-	  output[x][y] = pixel << 2; 
-	  
-	  // Receive new pixel
-	  pixel = SPI.transfer(0x00);
-	  delayMicroseconds( ADNS3080_T_LOAD );  
-	}
+    for( int x = 0; x < ADNS3080_PIXELS_X; x += 1 ) {  
+      
+      // Store and scale past pixel
+      output[x][y] = pixel << 2; 
+      
+      // Receive new pixel
+      pixel = SPI.transfer(0x00);
+      delayMicroseconds( ADNS3080_T_LOAD );  
+    }
   }
   // Disable communication
   digitalWrite( PIN_NCS, HIGH ); 

@@ -1,3 +1,4 @@
+
 #include <arduino.h>
 #include <SPI.h>
 
@@ -30,13 +31,13 @@
 
 //--------------- Template Parameters ---------------- [ No characters after backlash! ]
 
-#define TEMPLATE_TYPE 			\
-		uint8_t PIN_RESET, 		\
-		uint8_t PIN_NCS			
-	
-#define TEMPLATE_INPUTS			\
-				PIN_RESET, 		\
-				PIN_NCS	
+#define TEMPLATE_TYPE           \
+        uint8_t PIN_RESET,      \
+        uint8_t PIN_NCS         
+    
+#define TEMPLATE_INPUTS         \
+                PIN_RESET,      \
+                PIN_NCS 
   
 //---------------- Class definition ------------------
   
@@ -52,7 +53,7 @@ class ADNS3080 {
     void reset();
     bool setup( const bool, const bool );
     void motionClear();
-	
+    
     // Major outputs:
     void motionBurst( uint8_t*, uint8_t*, int8_t*, int8_t*, uint8_t*, uint16_t*, uint8_t* );
     void displacement( int8_t*, int8_t* );
