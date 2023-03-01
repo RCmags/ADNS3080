@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <SPI.h>
 
 #ifndef ADNS3080_h
