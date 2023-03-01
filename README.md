@@ -1,7 +1,7 @@
 # ADNS3080
 This is an Arduino library for ADNS3080 mouse sensor. It provides a simple interface to retrieve motion and frame data from the sensor. See the following schematic on how to connect a comercial module to an arduino uno. It is the same for other boards except the SPI spins change. 
 
-[!image](ADNS3080_arduino_wiring.jpg)
+![image](ADNS3080_arduino_wiring.jpg)
 
 _IMPORTANT:_ The camera must be focused for the sensor to work properly. See the following repo to focus the lens: [ADNS3080_frame_capture](https://github.com/RCmags/ADNS3080_frame_capture). It contains an arduino sketch and a python script that work in conjunction with this library.  
 
